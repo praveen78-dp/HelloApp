@@ -1,0 +1,17 @@
+# Ignore Metadata from Editors
+.vscode/
+.idea/
+*.iml
+
+# Ignore Compiled Java files (the "trash")
+*.class
+*.jar
+*.log
+
+# Ignore Maven's build folder
+target/
+bin/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
