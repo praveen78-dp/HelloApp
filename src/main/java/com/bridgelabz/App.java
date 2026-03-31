@@ -1,19 +1,19 @@
 package com.bridgelabz;
 
 /**
- * UC3: Display "Hello" with Command-Line Argument or Default "World"
+ * UC4: Display "Hello" with Multiple Command-Line Arguments or Default Message
  */
 public class App {
     public static void main(String[] args) {
-        // Step 1: Set a default name
-        String name = "World";
-
-        // Step 2: If an argument is provided, override the default
+        // Check if the user provided ANY arguments
         if (args.length > 0) {
-            name = args[0];
+            // Loop through each name provided in the arguments
+            for (String name : args) {
+                System.out.println("Hello " + name + "!");
+            }
+        } else {
+            // Default message if no names are provided
+            System.out.println("Hello World!");
         }
-
-        // Step 3: Display the final message
-        System.out.println("Hello " + name + "!");
     }
 }
