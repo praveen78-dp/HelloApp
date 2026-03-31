@@ -1,18 +1,18 @@
 package com.bridgelabz;
 
 /**
- * UC4: Display "Hello" with Multiple Command-Line Arguments or Default Message
+ * UC5: Display "Hello" with Multiple Command-Line Arguments using Enhanced For Loop
  */
 public class App {
     public static void main(String[] args) {
-        // Check if the user provided ANY arguments
+        // If arguments are provided, use the Enhanced For Loop
         if (args.length > 0) {
-            // Loop through each name provided in the arguments
+            // "For each String 'name' in the 'args' array..."
             for (String name : args) {
                 System.out.println("Hello " + name + "!");
             }
         } else {
-            // Default message if no names are provided
+            // Default greeting if array is empty
             System.out.println("Hello World!");
         }
     }
