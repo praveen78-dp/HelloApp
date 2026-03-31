@@ -1,18 +1,19 @@
 package com.bridgelabz;
 
 /**
- * UC2: Hello User with Command-Line Argument
+ * UC3: Display "Hello" with Command-Line Argument or Default "World"
  */
 public class App {
     public static void main(String[] args) {
-        // We check if the user passed any words (arguments) when running the program
+        // Step 1: Set a default name
+        String name = "World";
+
+        // Step 2: If an argument is provided, override the default
         if (args.length > 0) {
-            // args[0] is the first word you type after the command
-            String name = args[0]; 
-            System.out.println("Hello " + name + "!");
-        } else {
-            // This runs if you forget to type a name
-            System.out.println("Hello User!");
+            name = args[0];
         }
+
+        // Step 3: Display the final message
+        System.out.println("Hello " + name + "!");
     }
 }
