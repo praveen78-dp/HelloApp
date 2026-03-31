@@ -1,18 +1,24 @@
 package com.bridgelabz;
 
 /**
- * UC5: Display "Hello" with Multiple Command-Line Arguments using Enhanced For Loop
+ * UC6: Display "Hello" with Multiple Arguments and remove Trailing Delimiter
  */
 public class App {
     public static void main(String[] args) {
-        // If arguments are provided, use the Enhanced For Loop
         if (args.length > 0) {
-            // "For each String 'name' in the 'args' array..."
+            String greeting = "Hello ";
+            
+            // Build the string with commas
             for (String name : args) {
-                System.out.println("Hello " + name + "!");
+                greeting += name + ", ";
             }
+
+            // greeting is currently "Hello Praveen, Rahul, "
+            // We need to remove the last ", " (length - 2)
+            greeting = greeting.substring(0, greeting.length() - 2);
+            
+            System.out.println(greeting + "!");
         } else {
-            // Default greeting if array is empty
             System.out.println("Hello World!");
         }
     }
